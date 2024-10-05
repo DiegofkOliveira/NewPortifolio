@@ -412,7 +412,7 @@ a {
 .footer {
     width: 100%;
     text-align: center;
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 10px 0;
     position: fixed;
