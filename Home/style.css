@@ -93,7 +93,7 @@ a {
 }
 
 a:hover {
-    color:#333;
+    color: #333;
 }
 
 .container {
@@ -214,7 +214,7 @@ a:hover {
 }
 
 .overlay {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 300px;
@@ -226,9 +226,9 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.9s ease;
-    border-radius: 10px; 
+    border-radius: 10px;
     padding: 0 10px;
 }
 
@@ -578,13 +578,181 @@ a:hover {
         width: 200px;
         height: 150px;
     }
-    
+
     .contacts-item .fa-brands,
     .contacts-item .fa-regular {
         font-size: 22px;
         color: #333;
     }
+
+    .contacts-text {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .contacts-item {
+        width: 95%;
+        height: 55px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 2fr;
+        padding: 50px 50px;
+    }
+
+    .about-container {
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: justify;
+    }
+
+    .skills-container {
+        align-items: center;
+    }
+
+    .skills-technologies {
+        gap: 10px;
+        width: 350px;
+    }
+
+    .skills,
+    .skills-different {
+        width: 80px;
+        font-size: 45px;
+        align-items: center;
+    }
+
+    .image-container {
+        padding: 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+        gap: 20px;
+        border-radius: 10px;
+    }
     
+    .image-wrapper {
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+        width: 50vw;
+        height: 30vh;;
+    }
+
+    .image {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    .overlay {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    .image-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .image-text {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-list {
+        width: 200px;
+        height: 210px;
+        text-align: justify;
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    .services .services-list img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .services .services-list h2 {
+        font-size: 12px;
+    }
+
+    .services .services-list p {
+        font-size: 10px;
+        align-items: end;
+    }
+
+    .experience-container,
+    .services-container,
+    .education-container,
+    .portifolio-container {
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+    }
+
+    .experience,
+    .education {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px 0 30px;
+    }
+
+    .experience-list,
+    .education-list {
+        width: 350px;
+        height: 250px;
+    }
+
+    .experience-main,
+    .education-main {
+        font-size: 16px;
+    }
+
+    .education-main-text {
+        font-size: 12px;
+    }
+
+    .experience-text,
+    .education-list-item {
+        font-size: 11px;
+    }
+
+    .portifolio-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portifolio-items {
+        width: 200px;
+        height: 150px;
+    }
+
+    .contacts-item .fa-brands,
+    .contacts-item .fa-regular {
+        font-size: 22px;
+        color: #333;
+    }
+
+    .contacts-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .contacts-text {
         font-size: 14px;
         color: #333;
