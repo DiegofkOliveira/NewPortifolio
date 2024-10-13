@@ -89,6 +89,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color:#333;
 }
 
 .container {
@@ -177,38 +182,43 @@ a {
 }
 
 .image-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 800px;
-    padding: 20px 480px;
-    justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.image-list img {
-    width: 15vw;
-    height: 50vh;
-    overflow: hidden;
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 60vh;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 300px;
+    height: 500px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(194, 220, 244, 1);
 }
 
-.image-list {
-    position: relative;
-    width: 100%;
-    height: 99%;
+.image {
+    width: 300px;
+    height: 500px;
     border-radius: 10px;
-    border: none;
     box-shadow: 0 0 15px rgba(194, 220, 244, 1);
 }
 
 .overlay {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
+    width: 300px;
+    height: 500px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     display: flex;
@@ -216,31 +226,31 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    opacity: 0;
+    opacity: 0; 
     transition: opacity 0.9s ease;
-    padding: 10px 5px 10px;
-    border-radius: 10px;
+    border-radius: 10px; 
+    padding: 0 10px;
 }
 
 .image-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .image-text {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
 }
 
-.image-list:hover .overlay {
+.image-wrapper:hover .overlay {
     opacity: 1;
     z-index: 2;
 }
 
-.image-list:not(:hover) .overlay {
+.image-wrapper:not(:hover) .overlay {
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.9s ease;
+    transition: opacity 1s ease;
 }
 
 .services-container,
@@ -254,7 +264,6 @@ a {
     justify-content: center;
     width: 100%;
     height: 500px;
-    padding: 0 30px 30px;
 }
 
 .services-title,
@@ -321,7 +330,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 0 360px 30px;
 }
 
 .experience-list,
@@ -424,12 +432,19 @@ a {
     border-radius: 10px;
     padding: 20px 20px;
     gap: 20px;
+    outline: 1px solid transparent;
 }
 
 .contacts-item .fa-brands,
 .contacts-item .fa-regular {
     font-size: 26px;
     color: #333;
+}
+
+
+.contacts-item:hover {
+    outline-color: #333;
+    transition: all 1s;
 }
 
 .contacts-text {
@@ -481,18 +496,26 @@ a {
     }
 
     .image-container {
-        max-width: 800px;
-        padding: 20px 100px;
+        padding: 20px 20px;
     }
 
-    .image-list img {
+    .image-wrapper {
         width: 20vw;
         height: 30vh;
     }
 
     .image-list {
-        width: 100%;
-        height: 98%;
+        height: 30vh;
+    }
+
+    .image {
+        width: 20vw;
+        height: 30vh;
+    }
+
+    .overlay {
+        width: 20vw;
+        height: 30vh;
     }
 
     .image-title {
@@ -555,9 +578,20 @@ a {
         width: 200px;
         height: 150px;
     }
+    
+    .contacts-item .fa-brands,
+    .contacts-item .fa-regular {
+        font-size: 22px;
+        color: #333;
+    }
+    
+    .contacts-text {
+        font-size: 14px;
+        color: #333;
+    }
 
     .contacts-item {
-        width: 100%;
-        height: 70px;
+        width: 95%;
+        height: 55px;
     }
 }
