@@ -11,7 +11,7 @@ body {
     background-color: #f0f8ff;
 }
 
-.top-container {
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,12 +101,12 @@ a:hover:not(:hover) a {
     transition: all 1s;
 }
 
-.container {
+section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     place-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
     gap: 50px;
     margin: 0 auto;
     padding: 100px 50px 100px 100px;
@@ -190,12 +190,12 @@ a:hover:not(:hover) a {
     transition: all 1s;
 }
 
-.image-container {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .image-list {
@@ -265,17 +265,13 @@ a:hover:not(:hover) a {
     transition: opacity 1s ease;
 }
 
-.services-container,
-.experience-container,
-.education-container,
-.portifolio-container,
-.contacts-container {
+aside {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .services-title,
@@ -483,8 +479,22 @@ a:hover:not(:hover) a {
     margin: 0;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
+
 @media (max-width: 768px) {
-    .container {
+    section {
         grid-template-columns: 2fr;
     }
 
@@ -509,7 +519,7 @@ a:hover:not(:hover) a {
         align-items: center;
     }
 
-    .image-container {
+    main {
         padding: 20px 20px;
     }
 
@@ -612,7 +622,7 @@ a:hover:not(:hover) a {
 
 
 @media (max-width: 480px) {
-    .container {
+    section {
         grid-template-columns: 2fr;
         padding: 50px 20px;
     }
@@ -648,7 +658,7 @@ a:hover:not(:hover) a {
         align-items: center;
     }
 
-    .image-container {
+    main {
         padding: 20px 0px 20px;
         display: flex;
         flex-direction: column;
@@ -721,10 +731,7 @@ a:hover:not(:hover) a {
         align-items: end;
     }
 
-    .experience-container,
-    .services-container,
-    .education-container,
-    .portifolio-container {
+    aside {
         width: 100%;
         height: 100%;
         padding: 20px 20px;
