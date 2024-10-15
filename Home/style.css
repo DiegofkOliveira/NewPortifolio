@@ -18,6 +18,7 @@ body {
     justify-content: center;
     position: relative;
     height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -84,7 +85,7 @@ img {
 
 a {
     color: white;
-    font-size: 22px;
+    font-size: 26px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -96,36 +97,45 @@ a:hover {
     color: #333;
 }
 
+a:hover:not(:hover) a {
+    transition: all 1s;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
+    width: 100%;
+    place-items: center;
+    min-height: 100vh;
     gap: 50px;
     margin: 0 auto;
     padding: 100px 50px 100px 100px;
+    box-shadow: 0 0 15px rgba(194, 220, 244, 1);
 }
 
 .about-container,
 .skills-container {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 50%;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 50px;
 }
 
 .about-title,
 .skills-title {
     font-size: 2.2rem;
-    margin-left: 20px;
-    margin-bottom: 15px;
     font-weight: 700;
+    text-align: start;
+    padding-bottom: 20px;
 }
 
 .about-text {
     display: flex;
     flex-wrap: wrap;
     text-align: justify;
-    margin-left: 20px;
     max-width: 700px;
     font-weight: 300;
     font-size: 16px;
@@ -141,7 +151,6 @@ a:hover {
 .skills-list {
     display: flex;
     width: 80px;
-    margin-left: 20px;
 }
 
 .skills {
@@ -187,6 +196,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
+    box-shadow: 0 0 15px rgba(194, 220, 244, 1);
 }
 
 .image-list {
@@ -241,6 +252,7 @@ a:hover {
 .image-text {
     font-size: 14px;
     font-weight: 300;
+    text-align: justify;
 }
 
 .image-wrapper:hover .overlay {
@@ -264,7 +276,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    min-height: 100vh;
+    box-shadow: 0 0 15px rgba(194, 220, 244, 1);
 }
 
 .services-title,
@@ -475,7 +488,6 @@ a:hover {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 2fr;
-        padding: 50px 50px;
     }
 
     .about-container {
@@ -489,6 +501,7 @@ a:hover {
     .skills-technologies {
         gap: 10px;
         width: 350px;
+        place-items: center;
     }
 
     .skills,
@@ -503,22 +516,22 @@ a:hover {
     }
 
     .image-wrapper {
-        width: 20vw;
-        height: 30vh;
+        width: 30vw;
+        height: 40vh;
     }
 
     .image-list {
-        height: 30vh;
+        height: 40vh;
     }
 
     .image {
-        width: 20vw;
-        height: 30vh;
+        width: 30vw;
+        height: 40vh;
     }
 
     .overlay {
-        width: 20vw;
-        height: 30vh;
+        width: 30vw;
+        height: 40vh;
     }
 
     .image-title {
@@ -603,15 +616,21 @@ a:hover {
 @media (max-width: 480px) {
     .container {
         grid-template-columns: 2fr;
-        padding: 50px 50px;
+        padding: 50px 20px;
     }
 
     .about-container {
         align-items: center;
     }
 
+    .about-title,
+    .skills-title {
+        font-size: 24px;
+    }
+
     .about-text {
         text-align: justify;
+        font-size: 12px;
     }
 
     .skills-container {
@@ -619,14 +638,15 @@ a:hover {
     }
 
     .skills-technologies {
-        gap: 10px;
-        width: 350px;
+        width: 270px;
+        place-items: center;
     }
 
     .skills,
     .skills-different {
-        width: 80px;
-        font-size: 45px;
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
         align-items: center;
     }
 
@@ -647,13 +667,14 @@ a:hover {
         gap: 20px;
         border-radius: 10px;
     }
-    
+
     .image-wrapper {
         margin: auto;
         align-items: center;
         justify-items: center;
         width: 50vw;
-        height: 30vh;;
+        height: 30vh;
+        ;
     }
 
     .image {
@@ -667,17 +688,17 @@ a:hover {
     }
 
     .image-title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
     }
 
     .image-text {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 300;
     }
 
     .services {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .services-list {
