@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerImage = document.querySelector('.header-image');
     const headerText = document.querySelector('.header-text');
     const headerDev = document.querySelector('.header-dev');
+    const headerFront = document.querySelector('.header-soon-front');
+    const headerBack = document.querySelector('.header-soon-back');
 
     const options = {
         root: null,
@@ -24,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(headerImage);
         observer.observe(headerText);
         observer.observe(headerDev);
+        observer.observe(headerFront);
+        observer.observe(headerBack);
     }, (lastLetterDelay + 1) * 1000);
 });
 
