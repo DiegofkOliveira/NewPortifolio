@@ -1173,6 +1173,11 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.contacts-item:hover .contacts-icon {
+    -webkit-text-fill-color: #EDEFF0;
+    transition: -webkit-text-fill-color 0.3s ease;
+}
+
 .contacts-icon {
     font-size: 20px;
     line-height: 150%;
@@ -1181,11 +1186,6 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: -webkit-text-fill-color 0.3s ease;
-}
-
-.contacts-item:hover .contacts-icon {
-    -webkit-text-fill-color: #EDEFF0;
     transition: -webkit-text-fill-color 0.3s ease;
 }
 
