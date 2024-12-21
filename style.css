@@ -1220,6 +1220,10 @@ header {
         transform: translateX(50%);
     }
 
+    .about-text-end {
+        transform: translateX(50%);
+    }
+
     .about-text-start.visible,
     .about-text.visible,
     .about-text-end.visible {
@@ -1346,9 +1350,10 @@ header {
 
 @media (max-width: 480px) {
 
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
-    }    
+    }
 
     .animated-background {
         width: 266px;
@@ -1382,7 +1387,7 @@ header {
             opacity: 0;
             transform: translateX(-1000px);
         }
-    
+
         100% {
             opacity: 1;
             transform: translateX(0vw);
